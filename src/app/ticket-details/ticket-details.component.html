@@ -1,0 +1,66 @@
+<div class="row my-3">
+    <div class="col-md-6"><a href="#"><img src="../../assets/images/right-arrow.svg" class="ms-2"></a>
+        <p class="d-inline">تذكرة
+            رقم #2342</p>
+    </div>
+    <div class="col-md-6 text-start">
+        <button type="button" class="btn btn-light modify-btn p-2"><img src="../../assets/images/edit.svg"
+                class="ms-2">تعديل</button>
+    </div>
+</div>
+<div class="row my-4">
+    <div class="col-md-8">
+        <div class="card voucher-info">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="card-title voucher-usage-stats fw-normal">إحصائيات إستخدام القسيمة</h5>
+                        <div>
+                            <p class="card-text voucher-usage-period fw-medium d-inline-block">05 يوليو , 2023 - 05
+                                أغسطس , 2023
+                            </p>
+                            <img src="../../assets/images/vector.svg" class="me-2">
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-start">
+                        <button type="button" class="btn btn-light time-basis p-2">سنويا<img
+                                src="../../assets/images/down-arrow.svg" class="me-2"></button>
+                    </div>
+                </div>
+                <div>
+                    <canvasjs-chart [options]="chartOptions"></canvasjs-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card voucher">
+            <div class="card-body">
+                <h5 class="card-title offer text-center mb-4">عرض التذكرة الخاصة بالفيلم</h5>
+                <div class="claim-offer text-center rounded">
+                    <p class="card-text offer-link d-inline-block m-0">www.tazkty.com/473847</p>
+                    <img src="../../assets/images/copy.svg" class="me-3">
+                </div>
+                <p class="valid-until text-center mt-2">فعال حتي 15 يوليو 2023</p>
+                <hr class="separator">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="voucher-slip">
+                            <div class="discount-info d-inline-block">
+                                <p class="discount">خصم</p>
+                                <p class="discount-percentage">25%</p>
+                            </div>
+                            <button type="button" class="share-btn py-1 me-3"><img src="../../assets/images/send.svg"
+                                    class="ms-1">مشاركة</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-start">
+                        <div class="voucher-qr">
+                            <img src="../../assets/images/qr_img.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

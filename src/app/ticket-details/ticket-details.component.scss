@@ -1,0 +1,68 @@
+.modify-btn {
+  border-color: #e9eaea;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  color: #1c1c28;
+}
+.voucher-info {
+  border-color: #ebebeb;
+  .voucher-usage-stats {
+    color: #1c1c28;
+    font-size: 14px;
+  }
+  .voucher-usage-period {
+    font-family: "Inter";
+    font-size: 14px;
+    color: #99a1b7;
+  }
+  .time-basis {
+    font-size: 12px;
+    color: #1c1c28;
+    background-color: #fafafa;
+    border-color: #e8e8e8;
+  }
+}
+.voucher {
+  background-color: #8a74f9;
+  .offer {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  .claim-offer {
+    background-color: #ffffff;
+    border-radius: 8px;
+    .offer-link {
+      line-height: 3;
+      font-family: "Inter";
+      font-size: 13px;
+      color: #1c1c28;
+    }
+  }
+  .valid-until {
+    font-size: 12px;
+    color: #ffffff;
+  }
+  .separator {
+    border: 1px dashed #ffffff;
+    opacity: 0.4;
+  }
+  .voucher-slip {
+    .discount-info {
+      .discount {
+        font-size: 14px;
+        color: #ffffff;
+      }
+      .discount-percentage {
+        font-size: 18px;
+        color: #ffffff;
+      }
+    }
+    .share-btn {
+      border: 1px solid #ffffff;
+      border-radius: 4px;
+      background-color: #8a74f9;
+      font-size: 12px;
+      color: #ffffff;
+    }
+  }
+}
