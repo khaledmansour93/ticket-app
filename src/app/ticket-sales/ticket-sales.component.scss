@@ -1,0 +1,121 @@
+.ticket-sales {
+  font-weight: 400;
+  margin: 38px 0 28px;
+}
+.card {
+  .card-body {
+    .table {
+      thead {
+        .ticket-sales-info {
+          font-size: 13px;
+          th {
+            font-weight: 400;
+            color: #abaab1;
+          }
+        }
+      }
+      tbody {
+        tr {
+          th {
+            font-family: "Inter";
+            font-size: 13px;
+            font-weight: 400;
+            color: #898995;
+          }
+          td {
+            .user {
+              .user-avatar {
+                width: 30px;
+                height: 30px;
+                background-color: #038cb7;
+                border-radius: 50%;
+                color: #ffffff;
+                display: inline-block;
+                vertical-align: super;
+                margin-left: 8px;
+                .user-initials {
+                  font-family: "Inter";
+                  font-size: 12px;
+                  font-weight: 600;
+                  padding: 4px 6px;
+                  margin: 0;
+                  line-height: 1.66;
+                }
+              }
+              .avatar {
+                display: inline-block;
+                margin-left: 8px;
+              }
+              .user-info {
+                display: inline-block;
+                vertical-align: middle;
+                .user-name {
+                  font-size: 12px;
+                  font-weight: 400;
+                  color: #1c1c28;
+                }
+                .user-phone {
+                  font-family: "Poppins";
+                  font-size: 10px;
+                  color: #92a1ad;
+                  margin: 0;
+                }
+              }
+              #gray-avatar {
+                background-color: #898e95;
+              }
+            }
+          }
+          .ticket-number {
+            font-family: "Inter";
+            font-size: 13px;
+            color: #1c1c28;
+          }
+          .ticket-price,
+          .persons-count {
+            font-family: "Inter";
+            font-size: 13px;
+            color: #1c1c28;
+          }
+          .cinemas,
+          .purchase-count {
+            font-size: 13px;
+            color: #1c1c28;
+          }
+          .ticket {
+            font-size: 12px;
+            color: #000000;
+            .ticket-img {
+              margin-left: 8px;
+            }
+            .file-format {
+              font-family: "Inter";
+            }
+            .download-img {
+              margin-right: 22px;
+            }
+          }
+        }
+      }
+    }
+    nav {
+      .pagination {
+        .page-item.disabled {
+          .previous {
+            color: #d8d8e5;
+          }
+        }
+        .page-number {
+          font-family: "Inter-SemiBold";
+          font-size: 14px;
+          background-color: #8a74f9;
+        }
+        .page-item {
+          .next {
+            color: #7e8299;
+          }
+        }
+      }
+    }
+  }
+}
