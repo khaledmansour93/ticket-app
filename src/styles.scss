@@ -3,6 +3,14 @@
   src: url("assets/fonts/NeoSansArabic.woff") format("woff");
 }
 @font-face {
+  font-family: "Neo Sans Arabic Medium";
+  src: url("assets/fonts/NeoSansArabicMedium.woff") format("woff");
+}
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("assets/fonts/Inter-Regular.ttf");
+}
+@font-face {
   font-family: "Inter";
   src: url("assets/fonts/Inter-Medium.ttf");
 }
@@ -11,6 +19,19 @@
   src: url("assets/fonts/Inter-SemiBold.ttf");
 }
 @font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonts/Montserrat-Medium.ttf");
+}
+@font-face {
   font-family: "Poppins";
   src: url("assets/fonts/Poppins-Regular.ttf");
+}
+body {
+  background-color: #f3f5f7 !important;
+  margin: 75px 136px 37px 33px !important;
+}
+@media screen and (max-width: 320px) {
+  body {
+    margin: 75px 1px 37px 8px !important;
+  }
 }

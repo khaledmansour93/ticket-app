@@ -1,4 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ChartComponent, ApexAxisChartSeries, ApexChart, ApexXAxis, ApexDataLabels, ApexTooltip, ApexStroke, ApexYAxis, ApexFill, ApexMarkers } from 'ng-apexcharts';
+import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons';
+
+export type ChartOptions = {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  xaxis: ApexXAxis;
+  yaxis: ApexYAxis;
+  stroke: ApexStroke;
+  tooltip: ApexTooltip;
+  dataLabels: ApexDataLabels;
+  colors: String[];
+  markers: ApexMarkers;
+};
 
 @Component({
   selector: 'app-ticket-details',
@@ -6,44 +20,92 @@ import { Component } from '@angular/core';
   styleUrls: ['./ticket-details.component.scss']
 })
 export class TicketDetailsComponent {
-  chartOptions = {
-    animationEnabled: true,
-    axisX: {
-      reversed: true,
-      lineColor: "#E5E5EF",
-      tickLength: 0,
-      labelFontFamily: "Neo Sans Arabic",
-      labelFontColor: "#9291A5",
-      interval: 1
-    },
-    axisY: {
-      minimum: 0,
-      maximum: 255,
-      gridColor: "#E5E5EF",
-      lineColor: "transparent",
-      tickLength: 0,
-      labelFontSize: 0,
-      interval: 50
-    },
-    data: [{
-      type: "splineArea",
-      fillOpacity: 0.26,
-      color: "rgba(138, 116, 249, 1)",
-      markerSize: 0,
-      dataPoints: [
-        { label: "يناير", y: 225 },
-        { label: "فبراير", y: 100 },
-        { label: "مارس", y: 145 },
-        { label: "ابريل", y: 190 },
-        { label: "مايو", y: 200 },
-        { label: "يونيو", y: 230 },
-        { label: "يوليو", y: 170 },
-        { label: "أغسطس", y: 250 },
-        { label: "سبتمبر", y: 151 },
-        { label: "اكتوبر", y: 80 },
-        { label: "نوفمبر", y: 189 },
-        { label: "ديسمبر", y: 140 },
-      ]
-    }]
-  };
+  faArrowCircleUp = faArrowCircleUp;
+
+  @ViewChild("chart") chart!: ChartComponent;
+  public chartOptions: ChartOptions;
+
+  constructor() {
+    this.chartOptions = {
+      series: [
+        {
+          data: [140, 189, 80, 151, 250, 170, 230, 200, 190, 145, 100, 225]
+        }
+      ],
+      chart: {
+        height: 250,
+        type: "area",
+        toolbar: {
+          show: false
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        curve: "smooth",
+        colors: ["#8A74F9"],
+        width: 2
+      },
+      xaxis: {
+        type: "category",
+        categories: [
+          "ديسمبر",
+          "نوفمبر",
+          "اكتوبر",
+          "سبتمبر",
+          "أغسطس",
+          "يوليو",
+          "يونيو",
+          "مايو",
+          "ابريل",
+          "مارس",
+          "فبراير",
+          "يناير",
+        ],
+        labels: {
+          style: {
+            colors: '#9291A5',
+            fontFamily: 'Neo Sans Arabic Medium'
+          }
+        },
+        axisBorder: {
+          show: false
+        },
+        axisTicks: {
+          show: false
+        },
+        crosshairs: {
+          stroke: {
+            color: "#8A74F9",
+            width: 1.5,
+            dashArray: 0
+          },
+          fill: {
+            color: "#8A74F9"
+          }
+        }
+      },
+      colors: ["#8A74F9"],
+      yaxis: {
+        show: false
+      },
+      markers: {
+        hover: {
+          size: 9
+        }
+      },
+      tooltip: {
+        custom: function ({ series, seriesIndex, dataPointIndex, w }) {
+          return '<div class="arrow_box" style="background-color:#1e1b39;padding:9px;color:#e5e5ef">' +
+            '<span style="font-family:Inter-Regular;font-size:12px">' + series[seriesIndex][dataPointIndex] +
+            '</span>' + '<span style="font-family:Neo Sans Arabic;font-size:12px">' + ' إستخدام' + '</span>' +
+            '<br>' + '<span>' + '<img src="../../assets/images/growth-indicator.svg">' +
+            '</span>' + '<span style="font-family:Inter;font-size:8px;color:#8a74f9">' + '1.3%' +
+            '</span>' +
+            '</div>';
+        }
+      }
+    };
+  }
 }

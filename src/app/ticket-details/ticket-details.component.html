@@ -1,6 +1,6 @@
-<div class="row my-3">
+<div class="row">
     <div class="col-md-6"><a href="#"><img src="../../assets/images/right-arrow.svg" class="ms-2"></a>
-        <p class="d-inline">تذكرة
+        <p class="d-inline ticket-number">تذكرة
             رقم #2342</p>
     </div>
     <div class="col-md-6 text-start">
@@ -8,49 +8,55 @@
                 class="ms-2">تعديل</button>
     </div>
 </div>
-<div class="row my-4">
+<div class="row ticket-details">
     <div class="col-md-8">
         <div class="card voucher-info">
-            <div class="card-body">
+            <div class="card-body voucher-usage-stats">
                 <div class="row">
                     <div class="col-md-6">
-                        <h5 class="card-title voucher-usage-stats fw-normal">إحصائيات إستخدام القسيمة</h5>
-                        <div>
-                            <p class="card-text voucher-usage-period fw-medium d-inline-block">05 يوليو , 2023 - 05
-                                أغسطس , 2023
+                        <h5 class="card-title voucher-usage-title">إحصائيات إستخدام القسيمة</h5>
+                        <div class="voucher-usage-period">
+                            <p class="card-text voucher-usage-dates d-inline-block m-0">05&nbsp;<span
+                                    class="month">يوليو&nbsp;,</span>&nbsp;2023 - 05&nbsp;<span
+                                    class="month">أغسطس&nbsp;,</span>&nbsp;2023
                             </p>
                             <img src="../../assets/images/vector.svg" class="me-2">
                         </div>
                     </div>
                     <div class="col-md-6 text-start">
-                        <button type="button" class="btn btn-light time-basis p-2">سنويا<img
-                                src="../../assets/images/down-arrow.svg" class="me-2"></button>
+                        <button type="button" class="btn btn-light time-basis">سنويا<img
+                                src="../../assets/images/down-arrow.svg" class="down-arrow"></button>
                     </div>
                 </div>
-                <div>
-                    <canvasjs-chart [options]="chartOptions"></canvasjs-chart>
-                </div>
+                <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+                    [yaxis]="chartOptions.yaxis" [stroke]="chartOptions.stroke" [tooltip]="chartOptions.tooltip"
+                    [dataLabels]="chartOptions.dataLabels" [colors]="chartOptions.colors"
+                    [markers]="chartOptions.markers"></apx-chart>
             </div>
         </div>
     </div>
     <div class="col-md-4">
         <div class="card voucher">
-            <div class="card-body">
-                <h5 class="card-title offer text-center mb-4">عرض التذكرة الخاصة بالفيلم</h5>
-                <div class="claim-offer text-center rounded">
-                    <p class="card-text offer-link d-inline-block m-0">www.tazkty.com/473847</p>
-                    <img src="../../assets/images/copy.svg" class="me-3">
+            <div class="card-body voucher-body">
+                <div class="offer d-flex flex-column align-items-center">
+                    <h5 class="card-title offer-title">عرض التذكرة الخاصة بالفيلم</h5>
+                    <div class="claim-offer d-flex align-items-center">
+                        <p class="card-text offer-link d-inline-block">www.tazkty.com/473847</p>
+                        <img src="../../assets/images/copy.svg" class="me-3 copy-icon">
+                    </div>
+                    <p class="valid-until">فعال حتي&nbsp;<span class="date">15</span>&nbsp;يوليو&nbsp;<span
+                            class="year">2023</span>
+                    </p>
                 </div>
-                <p class="valid-until text-center mt-2">فعال حتي 15 يوليو 2023</p>
-                <hr class="separator">
+                <div class="separator"></div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="voucher-slip">
+                    <div class="col-md-6 d-flex flex-column justify-content-end">
+                        <div class="voucher-discount">
                             <div class="discount-info d-inline-block">
                                 <p class="discount">خصم</p>
-                                <p class="discount-percentage">25%</p>
+                                <p class="discount-percentage d-inline align-middle">25%</p>
                             </div>
-                            <button type="button" class="share-btn py-1 me-3"><img src="../../assets/images/send.svg"
+                            <button type="button" class="share-btn py-1"><img src="../../assets/images/send.svg"
                                     class="ms-1">مشاركة</button>
                         </div>
                     </div>
@@ -63,4 +69,3 @@
             </div>
         </div>
     </div>
-</div>

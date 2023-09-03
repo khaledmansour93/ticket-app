@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faSearch, faSliders, faArrowRightArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-ticket-sales',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./ticket-sales.component.scss']
 })
 export class TicketSalesComponent {
-
+  faSearch = faSearch;
+  faSliders = faSliders;
+  faArrowRightArrowLeft = faArrowRightArrowLeft;
 }

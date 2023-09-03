@@ -1,5 +1,37 @@
-<h6 class="ticket-sales">مبيعات التذاكر</h6>
-<div class="card">
+<div class="row ticket-sales">
+    <div class="col-md-8">
+        <div class="row align-items-center">
+            <div class="col-md-2">
+                <h6 class="ticket-sales-title">مبيعات التذاكر</h6>
+            </div>
+            <div class="col-md-4 search">
+                <span><fa-icon [icon]="faSearch" class="search-icon"></fa-icon></span>
+                <input type="search" class="form-control search-bar" placeholder="بحث عن ...">
+            </div>
+            <div class="col-md-2 filter-sort-btns">
+                <button type="button" class="btn btn-light filter-btn"><fa-icon [icon]="faSliders"
+                        class="filter-icon"></fa-icon></button>
+                <button type="button" class="btn btn-light sort-btn"><span class="sort-icon-rotated"><fa-icon
+                            [icon]="faArrowRightArrowLeft" flip="horizontal"></fa-icon></span></button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="row text-start align-items-center">
+            <div class="col-md-8">
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+                <p class="btn-status">مفعلة</p>
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-light book-a-ticket-btn">حجز تذكرة جديدة</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card ticket-sales-details">
     <div class="card-body">
         <div class="table-responsive">
             <table class="table text-center">
@@ -8,14 +40,15 @@
                         <th scope="col">#</th>
                         <th scope="col">المستخدم</th>
                         <th scope="col">رقم التذكرة</th>
-                        <th scope="col">قيمى التذكرة<img src="../../assets/images/arrow-3.svg" class="me-2"></th>
+                        <th scope="col">قيمى التذكرة<span class="sort-icon"><fa-icon
+                                    [icon]="faArrowRightArrowLeft"></fa-icon></span></th>
                         <th scope="col">السينمات</th>
                         <th scope="col">عدد الأشخاص</th>
                         <th scope="col">عدد مرات الشراء</th>
                         <th scope="col">التذكرة</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="align-middle">
                     <tr>
                         <th scope="row">1</th>
                         <td>

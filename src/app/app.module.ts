@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgApexchartsModule } from 'ng-apexcharts';
 import { AppComponent } from './app.component';
 import { TicketDetailsComponent } from './ticket-details/ticket-details.component';
 import { TicketSalesComponent } from './ticket-sales/ticket-sales.component';
@@ -13,7 +14,8 @@ import { TicketSalesComponent } from './ticket-sales/ticket-sales.component';
   ],
   imports: [
     BrowserModule,
-    CanvasJSAngularChartsModule
+    FontAwesomeModule,
+    NgApexchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
